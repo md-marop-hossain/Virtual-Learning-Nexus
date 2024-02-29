@@ -24,7 +24,7 @@
 
 <body>
     <!-- start Navigation -->
-    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <nav class="navbar navbar-expand-sm navbar-dark nav-padding fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand font-weight-bold ubuntu-bold" href="index.php">Virtual Learning Nexus</a>
             <span class="navbar-text">Learn and Implement</span>
@@ -33,20 +33,76 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Courses</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Payment Status</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">MY Profile</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Signup</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Feedback</a></li>
+                <ul class="navbar-nav custom-nav ul-padding">
+                    <li class="nav-item custom-nav-item"><a href="index.php" class="nav-link">Home</a></li>
+                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Courses</a></li>
+                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Payment Status</a></li>
+                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">MY Profile</a></li>
+                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Logout</a></li>
+                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Login</a></li>
+                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Signup</a></li>
+                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Feedback</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- End Navigation -->
+
+
+    <!-- Start video background -->
+    <div class="container-fluid remove-vid-marg">
+        <div class="vid-parent">
+            <video playsinline autoplay muted loop>
+                <source src="video/videoo.mp4">
+            </video>
+            <div class="vid-overlay">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="vid-content">
+        <h1 class="my-content">
+            Welcome to Virtual Learning Nexus
+        </h1>
+        <small class="my-content">
+            Learn and Implement
+        </small> <br>
+        <a href="#" class="btn btn-danger">Get Started</a>
+    </div>
+    <!-- End video background -->
+
+
+    <!-- start text banner  -->
+    <div class="container-fluid bg-danger txt-banner">
+        <div class="row bottom-banner">
+
+            <div class="col-sm">
+                <h5><i class="fas fa-book-open mr-3"></i>100+ Online Courses</h5>
+            </div>
+
+            <div class="col-sm">
+                <h5><i class="fas fa-users mr-3"></i>Expert Instructors</h5>
+            </div>
+
+            <div class="col-sm">
+                <h5><i class="fas fa-keyboard mr-3"></i>Lifetime Access</h5>
+            </div>
+
+            <div class="col-sm">
+                <h5><i class="fas fa-dollar-sign mr-3"></i>Money Back Guarantee</h5>
+            </div>
+
+        </div>
+    </div>
+    <!-- end text banner  -->
+
+
+    <!-- Start Most popular course  -->
+
+
+    <!-- end Most popular course  -->
+
 
     <!-- jquery and bootstrap javascript  -->
     <script src="js/jquery.min.js"></script>
