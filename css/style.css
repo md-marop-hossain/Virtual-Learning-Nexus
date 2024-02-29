@@ -61,6 +61,9 @@ video{
     padding: 10px;
 
 }
+.bottom-banner:first-child{
+    padding-left: 50px;
+}
 
 
 .stripe{

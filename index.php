@@ -35,6 +35,12 @@
         z-index: -5;
 
     }
+
+    a.social-hover:hover {
+        padding: 5px 100px;
+        text-decoration: none;
+        background-color: rgb(95, 93, 92);
+    }
     </style>
 
 
@@ -42,53 +48,15 @@
 </head>
 
 <body>
+
+
     <!-- start Navigation -->
-    <nav class="navbar navbar-expand-sm navbar-dark nav-padding fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand font-weight-bold ubuntu-bold" href="index.php">Virtual Learning Nexus</a>
-            <span class="navbar-text">Learn and Implement</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav custom-nav ul-padding">
-                    <li class="nav-item custom-nav-item"><a href="index.php" class="nav-link">Home</a></li>
-                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Courses</a></li>
-                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Payment Status</a></li>
-                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">MY Profile</a></li>
-                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Logout</a></li>
-                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Login</a></li>
-                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Signup</a></li>
-                    <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Feedback</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include('includes/navbar.php'); ?>
     <!-- End Navigation -->
 
 
     <!-- Start video background -->
-    <div class="container-fluid remove-vid-marg">
-        <div class="vid-parent">
-            <video playsinline autoplay muted loop>
-                <source src="video/videoo.mp4">
-            </video>
-            <div class="vid-overlay">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="vid-content">
-        <h1 class="my-content">
-            Welcome to Virtual Learning Nexus
-        </h1>
-        <small class="my-content">
-            Learn and Implement
-        </small> <br>
-        <a href="#" class="btn btn-danger">Get Started</a>
-    </div>
+    <?php include('includes/videobackgroundsection.php'); ?>
     <!-- End video background -->
 
 
@@ -305,40 +273,17 @@
         </div>
     </div> <!-- End Social Follow -->
 
+
+
     <!-- Start About Section -->
-    <div class="container-fluid p-4" style="background-color:#E9ECEF">
-        <div class="container" style="background-color:#E9ECEF">
-            <div class="row text-center">
-                <div class="col-sm">
-                    <h5>About Us</h5>
-                    <p>iSchool provides universal access to the world’s best education, partnering with top universities
-                        and organizations to offer courses online.</p>
-                </div>
-                <div class="col-sm">
-                    <h5>Category</h5>
-                    <a class="text-dark" href="#">Web Development</a><br />
-                    <a class="text-dark" href="#">Web Designing</a><br />
-                    <a class="text-dark" href="#">Android App Dev</a><br />
-                    <a class="text-dark" href="#">iOS Development</a><br />
-                    <a class="text-dark" href="#">Data Analysis</a><br />
-                </div>
-                <div class="col-sm">
-                    <h5>Contact Us</h5>
-                    <p>iSchool Pvt Ltd <br> Near Police Camp II <br> Bokaro, Jharkhand <br> Ph. 000000000 </p>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End About Section -->
+    <?php include('includes/aboutsection.php'); ?>
+    <!-- End About Section -->
 
 
 
 
     <!-- start footer  -->
-    <footer class="container-fluid bg-dark text-center p-2">
-        <small class="text-white">
-            Copyright &copy; 2019 || Designed By Virtual Learning Nexus || Admin Login
-        </small>
-    </footer>
+    <?php include('includes/footersection.php'); ?>
     <!-- end footer  -->
 
 
