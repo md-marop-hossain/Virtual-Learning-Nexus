@@ -13,8 +13,8 @@
                 <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Payment Status</a></li>
                 <li class="nav-item custom-nav-item"><a href="#" class="nav-link">MY Profile</a></li>
                 <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Logout</a></li>
-                <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Login</a></li>
-                <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Signup</a></li>
+                <li class="nav-item custom-nav-item"><a href="login.php" class="nav-link">Login</a></li>
+                <li class="nav-item custom-nav-item"><a href="signup.php" class="nav-link">Signup</a></li>
                 <li class="nav-item custom-nav-item"><a href="#" class="nav-link">Feedback</a></li>
             </ul>
         </div>
