@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- font awesome css  -->
     <link rel="stylesheet" href="css/all.min.css">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+
     <title>Virtual Learning Nexus</title>
 </head>
 
@@ -15,7 +26,7 @@
     <!-- start Navigation -->
     <nav class="navbar navbar-expand-sm bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand font-weight-bold" href="index.php">Virtual Learning Nexus</a>
+            <a class="navbar-brand font-weight-bold ubuntu-bold" href="index.php">Virtual Learning Nexus</a>
             <span class="navbar-text">Learn and Implement</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,14 +34,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Courses</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Payment Status</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">MY Profile</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Logout</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Login</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Signup</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Feedback</a></li>
+                    <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Payment Status</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">MY Profile</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Signup</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Feedback</a></li>
                 </ul>
             </div>
         </div>
