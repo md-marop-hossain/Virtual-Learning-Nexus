@@ -16,5 +16,5 @@
     <small class="my-content">
         Learn and Implement
     </small> <br>
-    <a href="#" class="btn btn-danger">Get Started</a>
+    <a href="register.php" class="btn btn-danger">Get Started</a>
 </div>

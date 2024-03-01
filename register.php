@@ -1,3 +1,9 @@
+<?php 
+session_start();
+$page_title = "Registration Form";
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -10,6 +16,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 
 </head>
 
@@ -26,42 +37,67 @@
                                     style="border-radius: 1rem 0 0 1rem;" />
                             </div>
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
+
+
+
+
+
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form>
+                                    <form action="code.php" method="POST">
+
+                                        <?php
+                    if(isset($_SESSION['status']))
+                    {
+                        ?>
+
+                                        <div class="alert  border" style="background-color: #ffe3b5;">
+                                            <h5 class="fw-bolder" style="color: #000000;">
+                                                <?= $_SESSION['status']; ?>
+                                            </h5>
+                                        </div>
+                                        <?php
+                unset($_SESSION['status']);
+                    }
+                    ?>
 
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                                             <span class="h1 fw-bold mb-0">Virtual Learning Nexus</span>
                                         </div>
 
-                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your
-                                            account</h5>
-
-
-
-
+                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Let's Create New
+                                            Account</h5>
 
                                         <div class="form-outline mb-4">
-                                            <input name="text" type="text" id="form2Example17"
-                                                class="form-control form-control-lg" />
+
+
                                             <label class="form-label" for="form2Example17">Name</label>
+
+                                            <input type="text" name="name" id="form2Example17"
+                                                class="border form-control form-control-lg" required />
+
                                         </div>
 
                                         <div name="text" type="phone" class="form-outline mb-4">
-                                            <input type="password" id="form2Example27"
-                                                class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example27">Phone Number</label>
+                                            <input type="text" name="phone" id="form2Example27"
+                                                class="border form-control form-control-lg" required />
+
                                         </div>
+
                                         <div type="text" name="email" class="form-outline mb-4">
-                                            <input type="password" id="form2Example27"
-                                                class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example27">Email Address</label>
+                                            <input type="text" name="email" id="form2Example27"
+                                                class="border form-control form-control-lg" required />
+
                                         </div>
+
                                         <div type="text" name="password" class="form-outline mb-4">
-                                            <input type="password" id="form2Example27"
-                                                class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example27">Password</label>
+                                            <input type="text" name="password" id="form2Example27"
+                                                class="border form-control form-control-lg" required />
+
                                         </div>
 
 
@@ -72,7 +108,7 @@
 
                                         <div class="pt-1 mb-4">
                                             <button class="btn btn-dark btn-lg btn-block" type="submit"
-                                                name="register_btn">Submit</button>
+                                                name="register_btn">SignUP</button>
                                         </div>
 
 
@@ -95,6 +131,11 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js">
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>

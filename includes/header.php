@@ -46,10 +46,15 @@
         text-decoration: none;
         background-color: rgb(95, 93, 92);
     }
+
+    .bg-body-green {
+        background-color: #27526a;
+        /* Use your preferred shade of green */
+    }
     </style>
 
 
-    <title>Virtual Learning Nexus</title>
+    <title><?php if(isset($page_title)) {echo "$page_title";}  ?> - Logo Name</title>
 </head>
 
 <body>

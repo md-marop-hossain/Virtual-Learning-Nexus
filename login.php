@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['authenticated'])){
+    $_SESSION['status'] = "You are already Logged In";
+    header('Location: dashboard.php');
+    exit(0);
+}
+
+$page_title = "Login Form";
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -10,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <title>Login Form</title>
 
 </head>
 
@@ -26,9 +39,29 @@
                                     style="border-radius: 1rem 0 0 1rem;" />
                             </div>
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
+
+
+
                                 <div class="card-body p-4 p-lg-5 text-black">
 
-                                    <form>
+
+
+                                    <form action="logincode.php" method="POST">
+
+                                        <?php
+                    if(isset($_SESSION['status']))
+                    {
+                        ?>
+
+                                        <div class="alert  border" style="background-color: #ffe3b5;">
+                                            <h5 class="fw-bolder" style="color: #000000;">
+                                                <?= $_SESSION['status']; ?>
+                                            </h5>
+                                        </div>
+                                        <?php
+                unset($_SESSION['status']);
+                    }
+                    ?>
 
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
@@ -39,26 +72,31 @@
                                             account</h5>
 
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example17"
-                                                class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example17">Email address</label>
+                                            <input type="text" name="email" id="form2Example17"
+                                                class="form-control form-control-lg border" required />
+
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="form2Example27"
-                                                class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example27">Password</label>
+                                            <input type="text" name="password" id="form2Example27"
+                                                class="border form-control form-control-lg" required />
+
                                         </div>
 
                                         <div class="pt-1 mb-4">
-                                            <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                                            <button class="btn btn-dark btn-lg btn-block" type="submit"
+                                                name="login_now_btn">Login</button>
                                         </div>
 
-                                        <a class="small text-muted" href="#!">Forgot password?</a>
+                                        <a class="small text-muted" href="password-reset.php">Forgot password?</a>
                                         <p class="mb-2 pb-lg-2" style="color: #393f81;">Don't have an
-                                            account? <a href="signup.php" style="color: #393f81;">Register here</a></p>
+                                            account? <a href="register.php" style="color: #393f81;">Register here</a>
+                                        </p>
                                         <p class="mb-2 pb-lg-2" style="color: #393f81;">Did not receive your
-                                            verification Email? <a href="#!" style="color: #393f81;">Resend</a></p>
+                                            verification Email? <a href="resend-email-verification.php"
+                                                style="color: #393f81;">Resend</a></p>
                                         <a href="#!" class="small text-muted">Terms of use.</a>
                                         <a href="#!" class="small text-muted">Privacy policy</a>
                                     </form>
