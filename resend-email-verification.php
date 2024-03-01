@@ -90,7 +90,7 @@ $page_title = "Login Form";
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                    <img src="image/resend-email-pic.jpg" class="img-fluid"
+                                    <img src="image/resend-email03.jpg" class="img-fluid"
                                         style="height: 250px; width: 300px" alt="Sample image">
 
                                 </div>

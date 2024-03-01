@@ -21,7 +21,18 @@ $page_title = "Registration Form";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <style>
+    .span-info {
+        color: #2c5e7b;
+        font-weight: 500;
+        font-size: 15px;
+    }
 
+    .span-i {
+        color: #2c5e7b;
+        font-size: 15px;
+    }
+    </style>
 </head>
 
 <body>
@@ -66,7 +77,8 @@ $page_title = "Registration Form";
                                             <span class="h1 fw-bold mb-0">Virtual Learning Nexus</span>
                                         </div>
 
-                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Let's Create New
+                                        <h5 class="fw-normal mb-3 pb-3 fw-bold" style="letter-spacing: 1px;">Let's
+                                            Create New
                                             Account</h5>
 
                                         <div class="form-outline mb-4">
@@ -112,11 +124,15 @@ $page_title = "Registration Form";
                                         </div>
 
 
-                                        <p class="mb-2 pb-lg-2" style="color: #393f81;">Already have an
+                                        <p class="mb-2 pb-lg-2 fw-semibold" style="color: #393f81;">Already have an
                                             account? <a href="login.php" style="color: #393f81;">Login here</a></p>
 
-                                        <a href="#!" class="small text-muted">Terms of use.</a>
-                                        <a href="#!" class="small text-muted">Privacy policy</a>
+                                        <!-- <a href="#!" class="small text-muted">Terms of use.</a>
+                                        <a href="#!" class="small text-muted">Privacy policy</a> -->
+                                        <i class="fa-solid fa-circle-info span-i"></i>
+                                        <span class="span-info"> To register,
+                                            make sure you provide a valid Email Address,
+                                            unless you have failed to verify your email account to log in.</span>
                                     </form>
 
                                 </div>
