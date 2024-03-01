@@ -24,6 +24,27 @@ $page_title = "Login Form";
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
     <title>Login Form</title>
 
+    <style>
+    .forgot-password {
+        font-weight: 600;
+        font-size: 15px;
+        color: #075261;
+
+    }
+
+    .register-here {
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .resend-p {
+        font-weight: 600;
+        font-size: 15px;
+        color: #1b3729;
+
+    }
+    </style>
+
 </head>
 
 <body>
@@ -90,15 +111,28 @@ $page_title = "Login Form";
                                                 name="login_now_btn">Login</button>
                                         </div>
 
-                                        <a class="small text-muted" href="password-reset.php">Forgot password?</a>
-                                        <p class="mb-2 pb-lg-2" style="color: #393f81;">Don't have an
-                                            account? <a href="register.php" style="color: #393f81;">Register here</a>
-                                        </p>
-                                        <p class="mb-2 pb-lg-2" style="color: #393f81;">Did not receive your
-                                            verification Email? <a href="resend-email-verification.php"
-                                                style="color: #393f81;">Resend</a></p>
-                                        <a href="#!" class="small text-muted">Terms of use.</a>
-                                        <a href="#!" class="small text-muted">Privacy policy</a>
+                                        <div class="mb-2">
+                                            <a class="small  text-muted fw-semibold" href="password-reset.php"><span
+                                                    class="forgot-password">Forgot
+                                                    password? We're here! No Worries about this...</span></a>
+                                        </div>
+                                        <div class="">
+                                            <p class=" pb-lg-2 fw-semibold" style="color: #393f81;"> <span
+                                                    class="register-here">Don't
+                                                    have an
+                                                    account?</span> <a href="register.php"
+                                                    style="color: #393f81;">Register
+                                                    here</a>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-2 pb-lg-2" style="color:#393f81;"><span class="resend-p">Did
+                                                    not receive your
+                                                    verification Email? </span><a href="resend-email-verification.php"
+                                                    style="color: #393f81;">
+                                                    <span class="resend-p">Resend Verification Email</span>
+                                                </a></p>
+                                        </div>
                                     </form>
 
                                 </div>
