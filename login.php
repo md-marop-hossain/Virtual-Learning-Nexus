@@ -135,6 +135,14 @@ $page_title = "Login Form";
                                         </div>
                                     </form>
 
+                                    <div class="d-flex justify-content-end mt-3">
+                                        <button type="button" class="btn btn-outline-info btn-rounded"
+                                            data-mdb-ripple-init data-mdb-ripple-color="dark"><a href="index.php"
+                                                style="color:#2c5e7b " class="fw-bolder">Want
+                                                To Back Homepage?</a></button>
+
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

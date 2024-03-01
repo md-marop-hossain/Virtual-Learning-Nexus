@@ -67,7 +67,7 @@ if(isset($_POST['password_reset_link']))
 
 
             send_password_reset($get_name, $get_email, $token);
-            $_SESSION['status'] = "We E-mailed you a password reset link";
+            $_SESSION['status'] = "Don't Delay: Password Reset Link Delivered to Your Inbox";
             header("Location: password-reset.php");
             exit(0);
 

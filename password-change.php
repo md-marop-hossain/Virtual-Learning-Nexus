@@ -11,75 +11,145 @@ $page_title = "Registration Form";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Change</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+    .button-color {
+        background-color: #2c5e7b;
+        color: white;
+    }
+    </style>
+
+
 </head>
 
 <body>
 
 
-    <div class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <?php
-                    if(isset($_SESSION['status']))
-                    {
-                        ?>
-                    <div class="alert alert-success">
-                        <h5><?= $_SESSION['status']; ?></h5>
-                    </div>
-                    <?php
-                unset($_SESSION['status']);
-                    }
-                    ?>
+    <section class="vh-100" style="background-color: #2c5e7b;">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-9">
 
-                    <div class="card shadow">
-                        <div class="card-header">
-                            <h5>Change Password</h5>
-                        </div>
-                        <div class="card-body">
-                            <form action="password-reset-code.php" method="POST">
+                    <h1 class="text-white mb-4">Reset your password</h1>
+                    <h4 class="text-white mb-4">Make new password! Secure your account!</h4>
+
+                    <form action="password-reset-code.php" method="POST">
+
+
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body">
 
                                 <input type="hidden" name="password_token"
                                     value="<?php if(isset($_GET['token'])){echo $_GET['token'];} ?>">
 
-                                <div class="form-group mb-3">
-                                    <label for="">Email Address</label>
-                                    <input type="text" name="email"
-                                        value="<?php if(isset($_GET['email'])){echo $_GET['email'];} ?>"
-                                        class="form-control" placeholder="Enter Your Email Address">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="">New Password</label>
-                                    <input type="text" name="new_password" class="form-control"
-                                        placeholder="Enter New Password">
+
+                                <div class="row align-items-center pt-4 pb-3">
+                                    <div class="col-md-3 ps-5">
+
+                                        <h6 class="mb-0">Email Address</h6>
+
+                                    </div>
+                                    <div class="col-md-9 pe-5">
+
+                                        <input type="text" name="email" class="form-control form-control-lg"
+                                            placeholder="example@example.com"
+                                            value="<?php if(isset($_GET['email'])){echo $_GET['email'];} ?>" required />
+
+                                    </div>
                                 </div>
 
-                                <div class="form-group mb-3">
-                                    <label for="">Confirm Password</label>
-                                    <input type="text" name="confirm_password" class="form-control"
-                                        placeholder="Enter your Password">
+                                <hr class="mx-n3">
+
+
+                                <div class="row align-items-center pt-4 pb-3">
+                                    <div class="col-md-3 ps-5">
+
+                                        <h6 class="mb-0">Enter Password</h6>
+
+                                    </div>
+                                    <div class="col-md-9 pe-5">
+
+                                        <input type="text" name="new_password" class="form-control form-control-lg"
+                                            placeholder="Enter your password" required />
+
+                                    </div>
                                 </div>
 
-                                <div class="form group">
-                                    <button type="submit" name="password_update" class="btn btn-success w-100"> Update
-                                        Password
-                                        Now</button>
+
+                                <hr class="mx-n3">
+
+                                <div class="row align-items-center pt-4 pb-3">
+                                    <div class="col-md-3 ps-5">
+
+                                        <h6 class="mb-0">Confirm Password</h6>
+
+                                    </div>
+                                    <div class="col-md-9 pe-5">
+
+                                        <input type="text" name="confirm_password" class="form-control form-control-lg"
+                                            placeholder="Re-type your password" required />
+
+                                    </div>
                                 </div>
-                            </form>
+
+                                <hr class="mx-n3">
+
+                                <div class="px-5 py-4">
+                                    <button type="submit" name="password_update"
+                                        class="btn button-color btn-lg border">Submit to
+                                        Change</button>
+                                </div>
+
+                                <div class="d-flex justify-content-end mt-3">
+                                    <button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-init
+                                        data-mdb-ripple-color="dark"><a href="index.php" style="color:#2c5e7b "
+                                            class="fw-bolder">Want
+                                            To Back Homepage?</a></button>
+
+                                </div>
+
+
+
+                                <div>
+                                    <?php
+                    if(isset($_SESSION['status']))
+                    {
+                        ?>
+
+                                    <div class="alert  border mt-4" style="background-color: #096a7f;">
+                                        <h6 class="fw-bolder" style="color: white;">
+                                            <?= $_SESSION['status']; ?>
+                                        </h6>
+                                    </div>
+                                    <?php
+                unset($_SESSION['status']);
+                    }
+                    ?>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
+
+                    </form>
+
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js">
     </script>
 </body>
 

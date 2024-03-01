@@ -18,9 +18,6 @@ $page_title = "Registration Form";
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <style>
     .span-info {
         color: #2c5e7b;
@@ -127,13 +124,20 @@ $page_title = "Registration Form";
                                         <p class="mb-2 pb-lg-2 fw-semibold" style="color: #393f81;">Already have an
                                             account? <a href="login.php" style="color: #393f81;">Login here</a></p>
 
-                                        <!-- <a href="#!" class="small text-muted">Terms of use.</a>
-                                        <a href="#!" class="small text-muted">Privacy policy</a> -->
+
                                         <i class="fa-solid fa-circle-info span-i"></i>
                                         <span class="span-info"> To register,
                                             make sure you provide a valid Email Address,
                                             unless you have failed to verify your email account to log in.</span>
                                     </form>
+
+                                    <div class="d-flex justify-content-end mt-3">
+                                        <button type="button" class="btn btn-outline-info btn-rounded"
+                                            data-mdb-ripple-init data-mdb-ripple-color="dark"><a href="index.php"
+                                                style="color:#2c5e7b " class="fw-bolder">Want
+                                                To Back Homepage?</a></button>
+
+                                    </div>
 
                                 </div>
                             </div>
@@ -148,9 +152,7 @@ $page_title = "Registration Form";
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+
 
 </body>
 

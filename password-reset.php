@@ -11,59 +11,99 @@ $page_title = "Password Reset Form";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Password Reset Form</title>
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+
+    <style>
+    @media (min-width: 1025px) {
+        .h-custom {
+            height: 100vh !important;
+        }
+    }
+    </style>
+
 </head>
 
 <body>
 
 
+    <section class="h-100 h-custom" style="background-color: #2c5e7b;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="card rounded-3">
+                        <img src="image/password-reset-pic.png" style="height: 400px; width: 100px" class="w-100"
+                            style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;" alt="Sample photo">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="mb-2 pb-md-0 mb-md-5 px-md-2">Reset Password</h3>
 
-    <div class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
+                            <form class="px-md-2" action="password-reset-code.php" method="POST">
 
-                    <?php
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1q">Enter Your Email Address</label>
+                                    <input type="text" name="email" id="form3Example1q" class="form-control border"
+                                        required />
+
+                                </div>
+
+
+
+                                <div>
+                                    <button type="submit" name="password_reset_link" class="btn btn-info btn-rounded "
+                                        data-mdb-ripple-init>Send
+                                        Password Reset Link</button>
+                                </div>
+
+                                <div class="d-flex justify-content-end mt-3">
+                                    <button type="button" class="btn btn-outline-info btn-rounded" data-mdb-ripple-init
+                                        data-mdb-ripple-color="dark"><a href="index.php" style="color:#2c5e7b "
+                                            class="fw-bolder">Want
+                                            To Back Homepage?</a></button>
+
+                                </div>
+
+
+                                <div>
+                                    <?php
                     if(isset($_SESSION['status']))
                     {
                         ?>
-                    <div class="alert alert-success">
-                        <h5><?= $_SESSION['status']; ?></h5>
-                    </div>
-                    <?php
+
+                                    <div class="alert  border mt-4" style="background-color: #096a7f;">
+                                        <h6 class="fw-bolder" style="color: white;">
+                                            <?= $_SESSION['status']; ?>
+                                        </h6>
+                                    </div>
+                                    <?php
                 unset($_SESSION['status']);
                     }
                     ?>
-
-                    <div class="card shadow">
-                        <div class="card-header">
-                            <h5>Reset Password</h5>
-                        </div>
-                        <div class="card-body">
-                            <form action="password-reset-code.php" method="POST">
-
-                                <div class="form-group mb-3">
-                                    <label for="">Email Address</label>
-                                    <input type="text" name="email" class="form-control">
                                 </div>
 
-                                <div class="form group">
-                                    <button type="submit" name="password_reset_link" class="btn btn-primary">Send
-                                        Password Reset Link</button>
-                                </div>
+
                             </form>
-                            <hr>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js">
     </script>
 </body>
 
